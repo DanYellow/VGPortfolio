@@ -1,0 +1,26 @@
+@import "bourbon";
+@import "neat";
+
+html{
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+}
+
+section#wrapper {
+    @include outer-container;
+}
+
+header {
+    #desc{
+        @include outer-container;
+    }
+
+    #nav {
+        @include outer-container;
+    }
+}
+
+#main {
+    @include fill-parent();
+}
