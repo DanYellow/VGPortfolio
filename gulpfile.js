@@ -7,6 +7,8 @@ var neat           = require('node-neat').includePaths;
 var mainBowerFiles = require('main-bower-files');
 var connect        = require('gulp-connect');
 
+var browserify = require('gulp-browserify');
+
 gulp.task('connect', function() {
   connect.server({
     root: 'dev',
@@ -31,6 +33,14 @@ gulp.task('twig', function(){
     .pipe(connect.reload());
 });
 
+gulp.task('scripts', function() {
+    // Single entry point to browserify
+    gulp.src('dev/assets/javascripts/foo.js')
+        .pipe(browserify())
+        .pipe(gulp.dest('./prod/assets/javascripts/'))
+});
+
+
 
 gulp.task('images', function () {
   return gulp.src('dev/assets/images/**/*')
@@ -39,7 +49,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('javascripts', function () {
-  return gulp.src('dev/assets/javascripts/**/*')
+  return gulp.src(['dev/assets/javascripts/**/*', '!dev/assets/javascripts/old'])
     .pipe(gulp.dest('prod/assets/javascripts'))
     .pipe(connect.reload());
 });
