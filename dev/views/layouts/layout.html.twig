@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="assets/stylesheets/style.css" />
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/stylesheets/style.css" />
 </head>
 <body>
-	<section id="wrapper">
-		<header>
-			<div id="desc">
-				<img src="assets/images/header-goutte-et-rond.png" alt="foo" />
-			</div>
-			<nav>
-				<ul>
-					<li><a href="#">DETAILS</a></li>
-					<li><a href="#">BLOG</a></li>
-					<li><a href="#">TWITTER</a></li>
-				</ul>
-			</nav>
-		</header>
-		{% block page %}{% endblock %}
-	</section>
-	<script src="assets/javascripts/settings.js"></script>
-	<script src="assets/javascripts/foo.js"></script>
+    <section id="wrapper">
+        <header>
+            <div id="main-infos">
+                <img src="assets/images/header-goutte-et-rond.png" alt="foo" />
+                <h1>Victor Gouteyron</h1>
+                <h2>Graphiste - Sérigraphe - Webdesigner</h2>
+                <span>
+                    <a class="main-infos__link" href="mailto:victor.gouteyron@hotmail.fr">mail</a>./ 0669589656
+                </span>
+                <a class="main-infos__link-logo" href="http://www.brbs.fr/" target="_blank">
+                    <img style="display:block; margin: 0 auto;" width="40px" src="assets/images/brbs-logo.png">
+                </a>
+            </div>
+            <nav id="navigation-header">
+                <ul id="navigation-header__elements">
+                    <li><a href="#">DETAILS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">TWITTER</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% block page %}{% endblock %}
+    </section>
+    <script src="assets/javascripts/settings.js"></script>
+    <script src="assets/javascripts/foo.js"></script>
 
-	<!--<script src="assets/vendors/jquery/dist/jquery.js"></script>
-	<script src="assets/vendors/underscore/underscore.js"></script>
-	<script src="assets/vendors/backbone/backbone.js"></script>
+    <!--<script src="assets/vendors/jquery/dist/jquery.js"></script>
+    <script src="assets/vendors/underscore/underscore.js"></script>
+    <script src="assets/vendors/backbone/backbone.js"></script>
 
-	<script src="assets/javascripts/Project.js"></script>
-	<script src="assets/javascripts/Projects.js"></script>
-	<script src="assets/javascripts/ProjectView.js"></script>
+    <script src="assets/javascripts/Project.js"></script>
+    <script src="assets/javascripts/Projects.js"></script>
+    <script src="assets/javascripts/ProjectView.js"></script>
 
-	<script src="assets/javascripts/Router.js"></script>-->
+    <script src="assets/javascripts/Router.js"></script>-->
 </body>
 </html>

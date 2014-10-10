@@ -1,0 +1,95 @@
+#main {
+    padding-top: 19px;
+}
+
+#legend-work {
+    margin-bottom: 9px;
+}
+
+ #portfolio {
+
+ }
+
+ #projects {
+    width: 98px;
+    margin-right: 37px;
+    vertical-align: top;
+    display: inline-block;
+
+    ul {
+        li {
+            display: inline-block;
+            background-color: blue;
+            height: 16px; width: 16px;
+
+            // Project have been seen
+            &[data-seen="true"] {
+                background-color: green;
+            }
+        }
+    }
+}
+
+#project {
+    display: inline-block;
+    width: 991px;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+#container-images-project {
+    width: 841px;
+    display: inline-block;
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        vertical-align: top;
+        margin-bottom: 19px;
+        opacity: 0;
+
+        &:nth-child(1) {
+            @include animation(myfirst, 0.35s, cubic-bezier(.2, 1.13, 1, .99), 0s, forwards);
+        }
+
+        &:nth-child(2) {
+            @include animation(myfirst, 0.35s, cubic-bezier(.2, 1.13, 1, .99), 2*0.45s, forwards);
+        }
+
+        &:nth-child(3) {
+            @include animation(myfirst, 0.35s, cubic-bezier(.2, 1.13, 1, .99), 3*0.45s, forwards);
+        }
+    }
+}
+
+#container-desc-project {
+    display: inline-block;
+    width: 141px;
+    vertical-align: top;
+    margin-left: 14px;
+    font-size: 10px;
+    white-space: normal;
+
+    h4 {
+        font-weight: bold;
+        font-size: 15px;
+        #project.rond & {
+            color: #acbba9;
+        }
+    }
+
+    p {
+        font-size: 11px;
+    }
+}
+
+ @-webkit-keyframes myfirst {
+    from {opacity: .25;}
+    to {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    from {opacity: .25;}
+    to {opacity: 1;}
+}

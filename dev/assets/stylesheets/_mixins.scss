@@ -1,0 +1,5 @@
+@mixin animation($animName, $time, $ease, $delay, $isKeepingLastState) {
+    -webkit-animation: $animName $time $ease $delay $isKeepingLastState;
+    -ms-animation: $animName $time $ease $delay $isKeepingLastState;
+    animation: $animName $time $ease $delay $isKeepingLastState;
+}
