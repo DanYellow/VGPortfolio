@@ -8,5 +8,6 @@ var Project = Backbone.Model.extend();
 
 
 module.exports = Backbone.Collection.extend({
-    url: App.apiPath
+    url: App.apiPath,
+    model: Project
 });

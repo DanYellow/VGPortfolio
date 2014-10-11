@@ -7,7 +7,7 @@ Backbone.$ = $;
 var ProjectsListView       = require('./projectsList/ProjectsListView');
 var ProjectsListCollection = require('./projectsList/ProjectsListCollection');
 
-var ProjectView = require('./project/ProjectView');
+var ProjectView            = require('./project/ProjectView');
 
 module.exports = Backbone.Router.extend({
 

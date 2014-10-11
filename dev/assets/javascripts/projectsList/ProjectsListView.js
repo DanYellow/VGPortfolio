@@ -16,5 +16,4 @@ module.exports = Backbone.View.extend({
 
         return this;
     }
-
 });

@@ -39,18 +39,31 @@
 }
 
 
-/* @-webkit-keyframes disappearLayer {
+@-webkit-keyframes disappearLayer {
     from {
-       background-color: white;}
+        @include prefixer(transform, translateY(0px), webkit moz spec);}
     to {
-        background-color: transparent;
-        z-index: -1000;}
-} */
+        @include prefixer(transform, translateY(-312.65%), webkit moz spec);}
+}
 
 @keyframes disappearLayer {
-    0% {
-       @include prefixer(transform, translateY(0px), webkit moz spec);}
-    100% {
-        @include prefixer(transform, translateY(-100%), webkit moz spec);}
+    from {
+        @include prefixer(transform, translateY(0px), webkit moz spec);}
+    to {
+        @include prefixer(transform, translateY(-312.65%), webkit moz spec);}
+}
 
+
+@keyframes scale {
+    0% {
+       @include prefixer(transform, scale(.92), webkit moz spec);}
+    100% {
+        @include prefixer(transform, scale(1), webkit moz spec);}
+}
+
+@-webkit-keyframes scale {
+    0% {
+       @include prefixer(transform, scale(.92), webkit moz spec);}
+    100% {
+        @include prefixer(transform, scale(1), webkit moz spec);}
 }

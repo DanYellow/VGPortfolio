@@ -33,6 +33,7 @@ header {
                 &:nth-child(1), &:nth-child(2) {
                     &:after {
                         content: " -\00a0";
+                        color: black;
                     }
                 }
             }
@@ -40,10 +41,15 @@ header {
     }
 
     a.main-infos__link-logo {
-        display: block;
+        display: inline-block;
     }
 
     span {
+        &:after{
+            content: '\A';
+            white-space: pre;
+        }
+
         a.main-infos__link {
             font-size: 16px;
             color: black;
@@ -63,7 +69,6 @@ header {
 
 
 #navigation-header {
-    margin-top: 142px;
     ul#navigation-header__elements {
         text-align: right;
         li {

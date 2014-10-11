@@ -1,15 +1,14 @@
 #animation{
     @include centerFlexbox();
-    @include animation(disappearLayer 0.10s linear forwards 3.5s);
+    @include animation(disappearLayer 0.250s linear forwards 3.5s);
 
-    position: absolute;
-    width: 100%;
-    height: 100%;
     z-index: 1000;
     background-color: white;
+    width: 100%; height: 100%;
+    position: absolute;
 
     #main-infos {
-        @include animation(infosSlide 0.350s linear forwards 3s);
+       // @include animation(infosSlide 0.350s linear forwards 3s);
 
         h1 {
             opacity: 0;
