@@ -1,0 +1,56 @@
+@-webkit-keyframes fadeIn {
+    from {opacity: .25;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: .25;}
+    to {opacity: 1;}
+}
+
+
+@-webkit-keyframes slide {
+    from {
+        @include prefixer(transform, translateX(20px), webkit moz spec);}
+    to {
+        @include prefixer(transform, translateX(0px), webkit moz spec);}
+}
+
+@keyframes slide {
+    from {
+        @include prefixer(transform, translateX(20px), webkit moz spec);}
+    to {
+        @include prefixer(transform, translateX(0px), webkit moz spec);}
+}
+
+
+@-webkit-keyframes infosSlide {
+    from {
+        @include prefixer(transform, translateY(0px), webkit moz spec);}
+    to {
+        @include prefixer(transform, translateY(-312.65%), webkit moz spec);}
+}
+
+@keyframes infosSlide {
+    from {
+        @include prefixer(transform, translateY(0px), webkit moz spec);}
+    to {
+        @include prefixer(transform, translateY(-312.65%), webkit moz spec);}
+}
+
+
+/* @-webkit-keyframes disappearLayer {
+    from {
+       background-color: white;}
+    to {
+        background-color: transparent;
+        z-index: -1000;}
+} */
+
+@keyframes disappearLayer {
+    0% {
+       @include prefixer(transform, translateY(0px), webkit moz spec);}
+    100% {
+        @include prefixer(transform, translateY(-100%), webkit moz spec);}
+
+}

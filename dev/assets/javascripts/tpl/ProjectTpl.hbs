@@ -1,0 +1,10 @@
+<figure id="container-images-project">
+	{{#each images}}
+    	<img src="{{ this }}" alt="" />
+	{{/each}}
+</figure>
+<div id="container-desc-project">
+	{{!-- class is goutte or rond --}}
+    <h4 class={{ category }}>{{ title }}</h4>
+    <p>{{ description }}</p>
+</div>

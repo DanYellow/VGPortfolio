@@ -1,12 +1,16 @@
 [
   {
-  	"id": 0,
+    "id": 0,
     "title": "1984",
-    "description": "George Orwel"
+    "description": "George Orwel",
+    "category": "goutte",
+    "images": ["http://lorempixel.com/output/cats-q-c-841-480-7.jpg", "http://lorempixel.com/output/city-q-c-841-480-3.jpg", "http://lorempixel.com/output/city-q-c-841-480-3.jpg"]
   },
   {
-  	"id": 1,
+    "id": 1,
     "title": "1984",
-    "description": "George Orwel"
+    "description": "George Orwel",
+    "category": "rond",
+    "images": ["http://lorempixel.com/output/city-q-c-841-480-3.jpg", "http://lorempixel.com/output/city-q-c-841-480-3.jpg", "http://lorempixel.com/output/city-q-c-841-480-3.jpg"]
   }
 ]

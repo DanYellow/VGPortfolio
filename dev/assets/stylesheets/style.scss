@@ -1,7 +1,12 @@
 @import "reset";
 @import "mixins";
 
+@import "bourbon";
+
 @import "base";
 
+@import "anims";
+
 @import "header";
+@import "intro-anim";
 @import "main";

@@ -1,6 +1,9 @@
-var greetings = require('./foo2');
+var $ = require('jquery');
+var Backbone = require('backbone');
+Backbone.$ = $;
 
-var foo = new greetings();
-foo.bark();
+var Router = require('./Router');
 
-alert('Hello world !');
+
+var router = new Router();
+Backbone.history.start();

@@ -23,6 +23,22 @@ header {
         font-size: 16px;
     }
 
+    h2 {
+        ul {
+            font-size: 0;
+            li {
+                display: inline-block;
+                font-size: 16px;
+
+                &:nth-child(1), &:nth-child(2) {
+                    &:after {
+                        content: " -\00a0";
+                    }
+                }
+            }
+        }
+    }
+
     a.main-infos__link-logo {
         display: block;
     }
@@ -47,6 +63,7 @@ header {
 
 
 #navigation-header {
+    margin-top: 142px;
     ul#navigation-header__elements {
         text-align: right;
         li {
@@ -70,7 +87,6 @@ header {
                 &:visited {
                     color: black;
                 }
-
             }
         }
     }
