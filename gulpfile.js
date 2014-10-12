@@ -32,7 +32,7 @@ gulp.task('browserify-scripts', function() {
     // Single entry point to browserify
     gulp.src('dev/assets/javascripts/main.js')
         .pipe(browserify({
-            transform: ['hbsify'],
+            transform: ['hbsify', 'debowerify'],
             extensions: ['.hbs']
         }))
         .pipe(gulp.dest('./prod/assets/javascripts/'))
@@ -58,7 +58,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('vendors', function() {
-    return gulp.src(mainBowerFiles(), { base: 'bower_components' })
+    return gulp.src('./bower_components/modernizr/modernizr.js' )
         .pipe(gulp.dest('prod/assets/vendors/'));
 });
 

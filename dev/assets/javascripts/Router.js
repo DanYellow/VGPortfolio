@@ -20,21 +20,33 @@ module.exports = Backbone.Router.extend({
     },
 
     projects: function() {
-        var projectsListCollection = new ProjectsListCollection();
-        projectsListCollection.fetch({
-            success: function (datas) {
-                var projectsListView = new ProjectsListView({collection: projectsListCollection, el: $("#projects")});
-            }
-        });
+        this.projectsList();
+        this.fetchProject(projectsListCollection.length - 1);
     },
 
     project: function(id) {
-        this.projects();
+        this.projectsList();
+        this.fetchProject(id);
+    },
 
+    fetchProject: function (id) {
         var projectsListCollection = new ProjectsListCollection();
         projectsListCollection.fetch({
             success: function (datas) {
                 var projectView = new ProjectView({ model: projectsListCollection.get(id), el: $("#project") });
+            }
+        });
+    },
+
+    lastProject: function  () {
+
+    },
+
+    projectsList: function () {
+        var projectsListCollection = new ProjectsListCollection();
+        projectsListCollection.fetch({
+            success: function (datas) {
+                var projectsListView = new ProjectsListView({collection: projectsListCollection, el: $("#projects")});
             }
         });
     }

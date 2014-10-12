@@ -41,16 +41,16 @@
 
 @-webkit-keyframes disappearLayer {
     from {
-        @include prefixer(transform, translateY(0px), webkit moz spec);}
+        opacity: 1;}
     to {
-        @include prefixer(transform, translateY(-312.65%), webkit moz spec);}
+        opacity: 0; z-index: -100;}
 }
 
 @keyframes disappearLayer {
     from {
-        @include prefixer(transform, translateY(0px), webkit moz spec);}
+        opacity: 1;}
     to {
-        @include prefixer(transform, translateY(-312.65%), webkit moz spec);}
+        opacity: 0; z-index: -100;}
 }
 
 

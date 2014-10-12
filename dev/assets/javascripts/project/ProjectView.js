@@ -2,6 +2,9 @@ var $ = require('jquery');
 var Backbone = require('backbone');
 var ProjectTpl = require('../tpl/ProjectTpl.hbs');
 
+//var domready = require('domready');
+//var _unveil = require('unveil');
+
 
 Backbone.$ = $;
 
@@ -20,6 +23,12 @@ module.exports = Backbone.View.extend({
 
     render: function () {
         this.$el.html(ProjectTpl(this.model.attributes));
+/*        $("img").unveil(0, function() {
+            console.log("foo");
+          $(this).load(function() {
+            this.style.opacity = 1;
+          });
+        });*/
         this.$el.removeAttr('class').addClass(this.model.attributes.category);
 
         return this;
