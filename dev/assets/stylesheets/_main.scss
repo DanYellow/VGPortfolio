@@ -4,6 +4,14 @@
 
 #legend-work {
     margin-bottom: 9px;
+    font-size: 16px;
+    li {
+        margin-bottom: 3px;
+        .icon-rond:before, .icon-goutte:before {
+            font-size: 20px;
+            vertical-align: top;
+        }
+    }
 }
 
  #portfolio {

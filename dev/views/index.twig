@@ -1,10 +1,26 @@
 {% extends "layouts/layout.html.twig" %}
 
+{% block index %}
+    <section id="animation">
+        <div id="main-infos">
+            <img src="assets/images/header-goutte-et-rond.png" alt="foo" />
+            <h1>Victor Gouteyron</h1>
+            <h2>
+                <ul>
+                    <li style="color:#666699">Graphiste</li>
+                    <li style="color:#cccc99">Sérigraphe</li>
+                </ul>
+            </h2>
+        </div>
+    </section>
+{% endblock %}
+
+
 {% block page %}
     <section id="main">
         <ul id="legend-work">
-            <li>WORKS</li>
-            <li>FREE TIME</li>
+            <li><span class="icon-rond"></span>GRAPHISME</li>
+            <li><span class="icon-goutte"></span>SÉRIGRAPHIE</li>
         </ul>
         <section id="portfolio">
             <aside id="projects">

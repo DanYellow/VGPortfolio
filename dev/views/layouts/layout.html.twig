@@ -20,27 +20,16 @@
      <script src="assets/vendors/modernizr.js"></script>
 </head>
 <body>
-    <section id="animation">
-        <div id="main-infos">
-            <img src="assets/images/header-goutte-et-rond.png" alt="foo" />
-            <h1>Victor Gouteyron</h1>
-            <h2>
-                <ul>
-                    <li style="color:#666699">Graphiste</li>
-                    <li style="color:#cccc99">Sérigraphe</li>
-                    <li style="color:#669999">Webdesigner</li>
-                </ul>
-            </h2>
-        </div>
-    </section>
+    {% block index %}{% endblock %}
+
     <section id="wrapper">
         <header>
             <div id="main-infos">
-                <a href="#" target="_self">
-                    <img src="assets/images/header-goutte-et-rond.png" alt="foo" />
+                <a href="/" target="_self" class="link-header">
+                    <span class="icon-Logo-goutte-et-rond"></span>
                 </a>
                 <h1>Victor Gouteyron</h1>
-                <h2>Graphiste - Sérigraphe - Webdesigner</h2>
+                <h2>Graphiste - Sérigraphe</h2>
                 <span>
                     <a class="main-infos__link" href="mailto:victor.gouteyron@hotmail.fr">mail</a>./ 0669589656
                 </span>
@@ -50,7 +39,7 @@
             </div>
             <nav id="navigation-header">
                 <ul id="navigation-header__elements">
-                    <li><a href="#">DETAILS</a></li>
+                    <li><a href="details.html">DETAILS</a></li>
                     <li><a href="http://goutteetrond.tumblr.com/" target="_blank">BLOG</a></li>
                     <li><a href="#">TWITTER</a></li>
                 </ul>

@@ -9,6 +9,8 @@ var ProjectsListCollection = require('./projectsList/ProjectsListCollection');
 
 var ProjectView            = require('./project/ProjectView');
 
+var projectsListCollection = new ProjectsListCollection();
+
 module.exports = Backbone.Router.extend({
 
     routes: {
@@ -30,7 +32,6 @@ module.exports = Backbone.Router.extend({
     },
 
     fetchProject: function (id) {
-        var projectsListCollection = new ProjectsListCollection();
         projectsListCollection.fetch({
             success: function (datas) {
                 var projectView = new ProjectView({ model: projectsListCollection.get(id), el: $("#project") });

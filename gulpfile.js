@@ -51,10 +51,15 @@ gulp.task('js', function () {
     .pipe(livereload());
 });
 
+gulp.task('fonts', function () {
+  return gulp.src(['dev/assets/fonts/fonts/**/*'])
+    .pipe(gulp.dest('prod/assets/fonts'));
+});
+
 gulp.task('watch', function() {
     gulp.watch(['dev/views/**'], ['twig']);
     gulp.watch('bower_components', ['vendors']);
-    gulp.watch(['dev/assets/**'], ['sass', 'images', 'browserify-scripts', 'js']);
+    gulp.watch(['dev/assets/**'], ['sass', 'images', 'browserify-scripts', 'js', 'fonts']);
 });
 
 gulp.task('vendors', function() {
