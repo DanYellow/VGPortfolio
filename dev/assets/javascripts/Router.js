@@ -11,6 +11,8 @@ var ProjectView            = require('./project/ProjectView');
 
 var projectsListCollection = new ProjectsListCollection();
 
+var flag = false;
+
 module.exports = Backbone.Router.extend({
 
     routes: {
@@ -27,7 +29,9 @@ module.exports = Backbone.Router.extend({
     },
 
     project: function(id) {
-        this.projectsList();
+        if(!flag) {
+            this.projectsList();
+        }
         this.fetchProject(id);
     },
 
@@ -44,7 +48,10 @@ module.exports = Backbone.Router.extend({
     },
 
     projectsList: function () {
-        var projectsListCollection = new ProjectsListCollection();
+        if(Number(projectsListCollection.length) !== 0) {
+            console.log("foo");
+            return;
+        }
         projectsListCollection.fetch({
             success: function (datas) {
                 var projectsListView = new ProjectsListView({collection: projectsListCollection, el: $("#projects")});

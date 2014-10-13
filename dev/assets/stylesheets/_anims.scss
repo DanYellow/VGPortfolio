@@ -14,7 +14,7 @@
         @include prefixer(transform, translateX(20px), webkit moz spec);}
     to {
         @include prefixer(transform, translateX(0px), webkit moz spec);}
-}
+} 
 
 @keyframes slide {
     from {
