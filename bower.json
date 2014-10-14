@@ -17,6 +17,6 @@
   "dependencies": {},
   "devDependencies": {
     "modernizr": "~2.8.3",
-    "unveil": "~1.3.0"
+    "PreloadJS": "*"
   }
 }

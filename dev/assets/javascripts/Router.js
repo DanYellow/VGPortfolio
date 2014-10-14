@@ -48,8 +48,8 @@ module.exports = Backbone.Router.extend({
     },
 
     projectsList: function () {
+        // Avoid calling each times thumbsnails
         if(Number(projectsListCollection.length) !== 0) {
-            console.log("foo");
             return;
         }
         projectsListCollection.fetch({

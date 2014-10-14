@@ -1,9 +1,9 @@
 var $ = require('jquery');
 var Backbone = require('backbone');
-var ProjectTpl = require('../tpl/ProjectTpl.hbs');
+var ProjectTpl = require('../tpl/ProjectTpl.hbs'); 
 
-//var domready = require('domready');
-//var _unveil = require('unveil');
+var preloadjs = require('PreloadJS');
+console.log(preloadjs);
 
 
 Backbone.$ = $;
@@ -12,22 +12,22 @@ Backbone.$ = $;
 module.exports = Backbone.View.extend({
 
     initialize: function () {
-        this.render();
+        this.render(); 
 
         var _this = this;
         $.ajaxSetup({
              beforeSend: _this.showLoader,
              complete: _this.hideLoader
-        });
+        }); 
     },
-
+ 
     render: function () {
         this.$el.html(ProjectTpl(this.model.attributes));
 /*        $("img").unveil(0, function() {
             console.log("foo");
           $(this).load(function() {
             this.style.opacity = 1;
-          });
+          });  
         });*/
         this.$el.removeAttr('class').addClass(this.model.attributes.category);
 
@@ -35,11 +35,11 @@ module.exports = Backbone.View.extend({
     },
 
     showLoader: function () {
-    	$("#loader").show();
+        $("#loader").show();
     },
 
     hideLoader: function () {
-    	$("#loader").hide();
+        $("#loader").hide();
     }
 
 });

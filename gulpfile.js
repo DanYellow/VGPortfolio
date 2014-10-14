@@ -8,7 +8,6 @@ var connect        = require('gulp-connect');
 
 
 var livereload = require('gulp-livereload');
-var browserify = require('gulp-browserify');
 
 var bourbon = require('node-bourbon');
 
@@ -30,12 +29,16 @@ gulp.task('twig', function(){
 
 gulp.task('browserify-scripts', function() {
     // Single entry point to browserify
-    gulp.src('dev/assets/javascripts/main.js')
-        .pipe(browserify({
-            transform: ['hbsify', 'debowerify'],
-            extensions: ['.hbs']
-        }))
-        .pipe(gulp.dest('./prod/assets/javascripts/'))
+    var browserify = require('browserify');
+    var source     = require('vinyl-source-stream');
+
+    browserify({
+        entries: ['./dev/assets/javascripts/main.js'],
+        extensions: ['.hbs']
+    })
+    .bundle().on('error', console.log)
+    .pipe(source('main.js'))
+    .pipe(gulp.dest('./prod/assets/javascripts/'));
 });
 
 
