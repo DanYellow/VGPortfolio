@@ -6,10 +6,12 @@ Backbone.$ = $;
 
 var ProjectsListView       = require('./projectsList/ProjectsListView');
 var ProjectsListCollection = require('./projectsList/ProjectsListCollection');
+var ProjectsListItem = require('./projectsListItem/ProjectsListItem');
 
 var ProjectView            = require('./project/ProjectView');
 
 var projectsListCollection = new ProjectsListCollection();
+var ProjectsListItem       = new ProjectsListItem();
 
 var flag = false;
 
@@ -38,6 +40,7 @@ module.exports = Backbone.Router.extend({
     fetchProject: function (id) {
         projectsListCollection.fetch({
             success: function (datas) {
+                //var projectView = new ProjectView({ model: projectsListCollection.get(id), el: $("#project") });
                 var projectView = new ProjectView({ model: projectsListCollection.get(id), el: $("#project") });
             }
         });
@@ -54,7 +57,7 @@ module.exports = Backbone.Router.extend({
         }
         projectsListCollection.fetch({
             success: function (datas) {
-                var projectsListView = new ProjectsListView({collection: projectsListCollection, el: $("#projects")});
+                var projectsListView = new ProjectsListView({collection: projectsListCollection, model: ProjectsListItem, el: $("#projects")});
             }
         });
     }

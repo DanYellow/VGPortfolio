@@ -18,7 +18,7 @@
     "transform": [
       "browserify-shim",
       "hbsify"
-    ] 
+    ]
   },
   "devDependencies": {
     "gulp": "~3.8.8",
@@ -39,6 +39,7 @@
     "backbone": "~1.1.2",
     "browserify": "~6.1.0",
     "browserify-shim": "~3.8.0",
-    "vinyl-source-stream": "~0.1.1"
+    "vinyl-source-stream": "~0.1.1",
+    "underscore": "~1.7.0"
   }
 }
