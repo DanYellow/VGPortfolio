@@ -57,7 +57,7 @@ module.exports = Backbone.Router.extend({
         }
         projectsListCollection.fetch({
             success: function (datas) {
-                var projectsListView = new ProjectsListView({collection: projectsListCollection, model: ProjectsListItem, el: $("#projects")});
+                var projectsListView = new ProjectsListView({collection: projectsListCollection, model: ProjectsListItem, el: $("#projects ul")});
             }
         });
     }

@@ -6,11 +6,11 @@ Backbone.$ = $;
 
 
 module.exports = Backbone.View.extend({
-	events: {
+  events: {
    'click' : 'selectedProject'
-
-  	},
-  	selectedProject: function(e){
+  },
+    selectedProject: function(e){
+      console.log('foo');
       if(typeof(Storage) !== "undefined")
       {
         console.log(e.target);
@@ -21,7 +21,6 @@ module.exports = Backbone.View.extend({
     },
 
     render: function () {
-      console.log(this.model);
       this.$el.html(ProjectsListItemTpl(this.model.toJSON()));
 
         return this;

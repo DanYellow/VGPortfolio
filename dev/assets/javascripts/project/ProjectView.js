@@ -22,7 +22,7 @@ module.exports = Backbone.View.extend({
 
         $.ajaxSetup({
              beforeSend: _this.showLoader
-        });
+        }); 
     },
 
     render: function () {
